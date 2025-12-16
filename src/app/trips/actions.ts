@@ -24,7 +24,7 @@ export async function createTrip(formData: FormData) {
 }
 
 export async function addPlayerToTrip(tripId: string, playerId: string) {
-  const supabase = await createServerClient();
+  const supabase =  await createServerClient();
 
   const { error } = await supabase.from("trip_players").insert({
     trip_id: tripId,
